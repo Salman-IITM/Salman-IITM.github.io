@@ -30,8 +30,11 @@ header .name {
 
 /* Navigation bar styling */
 header nav {
-  flex-grow: 1;
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Aligns nav items to the bottom */
+  padding-bottom: 10px; /* Adds space between nav items and bottom edge */
 }
 
 header nav ul {
