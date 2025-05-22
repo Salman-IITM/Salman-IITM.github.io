@@ -11,7 +11,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to right, red, white);
+  background: linear-gradient(to right, blue, white);
   padding: 10px 20px;
   color: white;
 }
@@ -24,7 +24,7 @@ header .logo img {
 
 header .name {
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin-top: 5px;
 }
 
