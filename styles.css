@@ -22,6 +22,12 @@ header .logo img {
   height: auto;
 }
 
+header .name {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 5px;
+}
+
 /* Navigation bar styling */
 header nav {
   flex-grow: 1;
