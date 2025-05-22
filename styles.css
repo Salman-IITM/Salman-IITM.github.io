@@ -24,7 +24,7 @@ header .logo img {
 
 header .name {
   font-weight: bold;
-  font-size: 2.0em;
+  font-size: 1.8em;
   margin-top: 5px;
 }
 
@@ -131,7 +131,7 @@ header nav ul li a:hover {
 footer {
   text-align: center;
   padding: 10px;
-  background-color: red;
+  background-color: #000080; /* Navy Blue */
   color: white;
   margin-top: 20px;
 }
@@ -139,7 +139,7 @@ footer {
 /* Image Gallery Styling */
 .image-gallery {
   width: 100%;
-  background: linear-gradient(to right, red, white);
+  background: linear-gradient(to right, white, cyan, white);
   padding: 20px 0;
   margin-top: 20px;
 }
