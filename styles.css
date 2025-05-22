@@ -1,21 +1,11 @@
-/* Reset default margins and paddings */
+/* Apply Times New Roman font globally */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
 }
 
-/* Body and font settings */
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-/* Header styling */
+/* Header styling with red background */
 header {
-  background-color: #003366;
+  background-color: red; /* You can also use #FF0000 for pure red */
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -122,7 +112,7 @@ header nav ul li a:hover {
 footer {
   text-align: center;
   padding: 10px;
-  background-color: #003366;
+  background-color: red;
   color: white;
   margin-top: 20px;
 }
