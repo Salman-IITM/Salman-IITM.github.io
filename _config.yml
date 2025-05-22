@@ -1,1 +1,3 @@
-theme: jekyll-theme-slate
+title: My Awesome Site
+  description: A place to showcase my projects
+  theme: jekyll-theme-minimal
