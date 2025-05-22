@@ -173,7 +173,7 @@ footer {
 
 /* New code for transparent other images when one is active */
 .gallery-container.active .image:not(.active) {
-  opacity: 0.4;
+  opacity: 0.05;
 }
 
 .image img:hover {
