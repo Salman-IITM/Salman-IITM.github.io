@@ -6,14 +6,15 @@
   box-sizing: border-box;
 }
 
-/* Header styling with red to white gradient */
+/* Header styling with navy blue background */
 header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   background-color: #000080; /* Navy Blue */
   padding: 10px 20px;
   color: white;
+  height: 100px; /* Adjust height as needed */
 }
 
 /* Logo styling */
@@ -30,15 +31,18 @@ header .name {
 
 /* Navigation bar styling */
 header nav {
-  flex-grow: 1;
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Aligns nav items to the bottom */
+  padding-bottom: 10px; /* Adds space between nav items and bottom edge */
 }
 
 header nav ul {
   list-style: none;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
-  margin-top: 10px;
+  width: 100%;
 }
 
 header nav ul li {
@@ -54,6 +58,7 @@ header nav ul li a {
 header nav ul li a:hover {
   text-decoration: underline;
 }
+
 /* Main content layout */
 .main-content {
   display: flex;
