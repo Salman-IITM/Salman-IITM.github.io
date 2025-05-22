@@ -49,11 +49,33 @@ header nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  padding: 5px 10px;
+  border-radius: 4px;
 }
 
 header nav ul li a:hover {
   text-decoration: underline;
+  animation: navHoverEffect 0.5s ease-in-out forwards;
+  background-color: #003366; /* Slightly darker navy */
+  transform: scale(1.1);
 }
+
+@keyframes navHoverEffect {
+  0% {
+    transform: scale(1);
+    background-color: transparent;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: #0055aa;
+  }
+  100% {
+    transform: scale(1.05);
+    background-color: #003366;
+  }
+}
+
 /* Main content layout */
 .main-content {
   display: flex;
