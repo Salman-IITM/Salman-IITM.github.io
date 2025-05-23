@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GitHub Profile - Salman Shah</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Add these styles or put them in your styles.css */
+    .profile-info {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px; /* space between image and text */
+    }
+    .profile-info img {
+      width: 144px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .profile-text {
+      max-width: 500px;
+    }
+  </style>
 </head>
 <body>
 
@@ -24,14 +41,14 @@
   <!-- Main Content -->
   <main>
     <section class="profile-info">
-      <h1>About me</h1>
-      <p>A Researcher, Teacher and Simple Human being</p>
-      
-        <img src="gallery/image3.jpg" alt="Me" width="144" height="300">
-      </a>
+      <img src="gallery/image3.jpg" alt="Me" />
+      <div class="profile-text">
+        <h1>About me</h1>
+        <p>A Researcher, Teacher and Simple Human being.</p>
+        <p>I am passionate about learning and sharing knowledge. I love working on innovative projects and collaborating with like-minded people.</p>
+        <p>In my free time, I enjoy reading, hiking, and exploring new technologies.</p>
+      </div>
     </section>
-
-  
   </main>
 
   <!-- Footer -->
