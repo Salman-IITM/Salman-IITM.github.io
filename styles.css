@@ -67,7 +67,7 @@ header nav ul li a:hover {
     background-color: transparent;
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.2);
     background-color: #0055aa;
   }
   100% {
@@ -199,7 +199,7 @@ footer {
 }
 
 .image img:hover {
-  transform: scale(1.05);
+  transform: scale(1.2);
 }
 
 /* Contact Page Styling */
