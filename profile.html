@@ -2,31 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GitHub Profile - Salman Shah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects - Salman Shah</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Main content layout for project page */
+    .main-content {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .project-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 12px;
+    }
+
+    .project-item img {
+      width: 120px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 6px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .project-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #222;
+    }
+
+    @media (max-width: 600px) {
+      .project-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .project-item img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
 </head>
 <body>
-
   <!-- Header -->
   <header>
     <div class="logo">
-      <img src="dp.jpg" alt="Salman Shah's Photo">
+      <img src="dp.jpg" alt="Salman Shah's Photo" />
       <div class="name">Salman Shah</div>
     </div>
     <nav>
       <ul>
-        <li><a href="index.html">Back to Home</a></li>
+        <li><a href="profile.html">Profile Overview</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Repositories</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Main Content -->
-  <main>
-    <section class="profile-info">
-      <h1>Profile Summary</h1>
-      <p>Greetings,
-      Welcome to my personal website.
-      (Reume will be updated later)</p>
-      <a href="https://www.linkedin.com/in/salman-shah-a9952a186/" target="_blank">
-        <img src="gallery/github.svg" al
+  <div class="main-content">
+    <h1>Projects</h1>
+    <div class="project-list">
+      <div class="project-item">
+        <img src="gallery/image1.jpg" alt="Project 1" />
+        <div class="project-title">Project Title One</div>
+      </div>
+
+      <div class="project-item">
+        <img src="gallery/image2.jpg" alt="Project 2" />
+        <div class="project-title">Project Title Two</div>
+      </div>
+
+      <div class="project-item">
+        <img src="gallery/image3.jpg" alt="Project 3" />
+        <div class="project-title">Project Title Three</div>
+      </div>
+
+      <div class="project-item">
+        <img src="gallery/image4.jpg" alt="Project 4" />
+        <div class="project-title">Project Title Four</div>
+      </div>
+
+      <div class="project-item">
+        <img src="gallery/image5.jpg" alt="Project 5" />
+        <div class="project-title">Project Title Five</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Salman Shah, Doctoral Research Scholar, Department of Ocean Engineering, IIT Madras, India.</p>
+  </footer>
+</body>
+</html>
