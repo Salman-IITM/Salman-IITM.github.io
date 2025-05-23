@@ -2,111 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects - Salman Shah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GitHub Profile - Salman Shah</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* Main content layout for project page */
-    .main-content {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-
-    .project-list {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-    }
-
-    .project-item {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 12px;
-    }
-
-    .project-item img {
-      width: 120px;
-      height: 90px;
-      object-fit: cover;
-      border-radius: 6px;
-      flex-shrink: 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .project-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #222;
-    }
-
-    @media (max-width: 600px) {
-      .project-item {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .project-item img {
-        width: 100%;
-        height: auto;
-      }
-    }
-  </style>
 </head>
 <body>
+
   <!-- Header -->
   <header>
     <div class="logo">
-      <img src="dp.jpg" alt="Salman Shah's Photo" />
+      <img src="dp.jpg" alt="Salman Shah's Photo">
       <div class="name">Salman Shah</div>
     </div>
     <nav>
       <ul>
-        <li><a href="profile.html">Profile Overview</a></li>
-        <li><a href="project.html">Projects</a></li>
-        <li><a href="#">Articles</a></li>
-        <li><a href="#">Repositories</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Main Content -->
-  <div class="main-content">
-    <h1>Projects</h1>
-    <div class="project-list">
-      <div class="project-item">
-        <img src="gallery/image1.jpg" alt="Project 1" />
-        <div class="project-title">Project Title One</div>
+  <main>
+    <section class="profile-info">
+      <h1>GitHub Profile</h1>
+      <p>Hello! I'm Salman Shah, a student at IIT Madras passionate about Ocean Engineering and software development.</p>
+      <a href="https://github.com/your-github-username" target="_blank">
+        <img src="gallery/github.svg" alt="GitHub Profile" width="120" height="40">
+      </a>
+    </section>
+
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Python, C++, MATLAB</li>
+        <li>Data Analysis, Signal Processing</li>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Underwater Acoustic Modelling</h3>
+        <p>Simulation of acoustic wave propagation in ocean environments using MATLAB.</p>
+        <a href="https://github.com/your-github-username/acoustic-model" target="_blank">View on GitHub</a>
       </div>
 
-      <div class="project-item">
-        <img src="gallery/image2.jpg" alt="Project 2" />
-        <div class="project-title">Project Title Two</div>
+      <div class="project">
+        <h3>Sensor Network Data Logger</h3>
+        <p>Real-time data acquisition and logging system built with Raspberry Pi and Python.</p>
+        <a href="https://github.com/your-github-username/data-logger" target="_blank">View on GitHub</a>
       </div>
-
-      <div class="project-item">
-        <img src="gallery/image3.jpg" alt="Project 3" />
-        <div class="project-title">Project Title Three</div>
-      </div>
-
-      <div class="project-item">
-        <img src="gallery/image4.jpg" alt="Project 4" />
-        <div class="project-title">Project Title Four</div>
-      </div>
-
-      <div class="project-item">
-        <img src="gallery/image5.jpg" alt="Project 5" />
-        <div class="project-title">Project Title Five</div>
-      </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; Salman Shah, Doctoral Research Scholar, Department of Ocean Engineering, IIT Madras, India.</p>
+    <p>&copy; 2025 Salman Shah | <a href="contact.html">Contact</a></p>
   </footer>
+
 </body>
 </html>
