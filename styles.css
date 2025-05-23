@@ -241,3 +241,32 @@ footer {
 .contact-form button:hover {
   background-color: #003366;
 }
+.video-thumbnails {
+  padding: 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.video-thumbnails h2 {
+  margin-bottom: 15px;
+}
+
+.videos-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.videos-container video {
+  width: 250px;
+  height: 150px;
+  border-radius: 8px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.videos-container video:hover {
+  transform: scale(1.05);
+}
