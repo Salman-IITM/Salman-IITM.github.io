@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects - Salman Shah</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Main content layout for project page */
+    .main-content {
+      display: flex;
+      gap: 40px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .projects-images {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 40%;
+    }
+
+    .projects-images img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      object-fit: cover;
+      cursor: default;
+      border: 1px solid #ccc;
+    }
+
+    .projects-names {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 48px; /* roughly matches image gap */
+      width: 55%;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #222;
+      padding-top: 6px; /* vertically align with images */
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+        padding: 10px;
+      }
+      .projects-images, .projects-names {
+        width: 100%;
+        gap: 15px;
+      }
+      .projects-names {
+        padding-top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header copied exactly from index.html -->
+  <header>
+    <div class="logo">
+      <img src="dp.jpg" alt="Salman Shah's Photo" />
+      <div class="name">Salman Shah</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="profile.html">Profile Overview</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Repositories</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content replaced as requested -->
+  <div class="main-content">
+    <div class="projects-images">
+      <img src="gallery/image1.jpg" alt="Project Image 1" />
+      <img src="gallery/image2.jpg" alt="Project Image 2" />
+      <img src="gallery/image3.jpg" alt="Project Image 3" />
+      <img src="gallery/image4.jpg" alt="Project Image 4" />
+      <img src="gallery/image5.jpg" alt="Project Image 5" />
+    </div>
+
+    <div class="projects-names">
+      <div>Project Title One</div>
+      <div>Project Title Two</div>
+      <div>Project Title Three</div>
+      <div>Project Title Four</div>
+      <div>Project Title Five</div>
+    </div>
+  </div>
+
+  <!-- Footer copied exactly from index.html -->
+  <footer>
+    <p>&copy; Salman Shah, Doctoral Research Scholar, Department of Ocean Engineering, IIT Madras, India.</p>
+  </footer>
+</body>
+</html>
