@@ -6,21 +6,21 @@
   <title>Projects - Salman Shah</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .project-page .main-content {
-      width: 100vw; /* Full screen width */
+    body {
       margin: 0;
-      padding: 0;
     }
 
-    .projects-columns {
+    .project-page .main-content {
+      width: 100vw;
       display: flex;
-      width: 100%;
+      padding: 0;
+      margin: 0;
     }
 
     .projects-column {
-      width: 50vw; /* Half of the viewport width */
+      width: 50vw;
+      padding: 20px;
       box-sizing: border-box;
-      padding: 0 20px;
     }
 
     .projects-column h2 {
@@ -59,7 +59,7 @@
     }
 
     @media (max-width: 800px) {
-      .projects-columns {
+      .main-content {
         flex-direction: column;
       }
 
@@ -95,50 +95,44 @@
 
   <!-- Main Content -->
   <div class="main-content">
-    <div class="projects-columns">
-      
-      <!-- Academic Projects (Left side of full screen) -->
-      <div class="projects-column">
-        <h2>Academic Projects</h2>
-        <div class="project-list">
 
-          <div class="project-item">
-            <img src="projects/wosc.JPG" alt="Project 2" />
-            <div class="project-title">Effect of Spatial Distribution of Sinker Arrays on Volume Deformation in Offshore Aquaculture Cages</div>
-          </div>
-          
-          <div class="project-item">
-            <img src="projects/dpm.jpeg" alt="Project 1" />
-            <div class="project-title">Numerical investigation on Fuel Jet Dynamics using Discrete Phase Model in Diesel engine</div>
-          </div>
+    <!-- Academic Projects - Left Half -->
+    <div class="projects-column">
+      <h2>Academic Projects</h2>
+      <div class="project-list">
+        <div class="project-item">
+          <img src="projects/wosc.JPG" alt="Project 2" />
+          <div class="project-title">Effect of Spatial Distribution of Sinker Arrays on Volume Deformation in Offshore Aquaculture Cages</div>
+        </div>
 
-          <div class="project-item">
-            <img src="projects/IJAER.JPG" alt="Project 3" />
-            <div class="project-title">A Numerical Investigation on Flow Characteristics of Jets Emerging from a Multi-Lobed Nozzle with Pointed Corrugations</div>
-          </div>
+        <div class="project-item">
+          <img src="projects/dpm.jpeg" alt="Project 1" />
+          <div class="project-title">Numerical investigation on Fuel Jet Dynamics using Discrete Phase Model in Diesel engine</div>
+        </div>
 
-          <div class="project-item">
-            <img src="projects/IJSR.JPG" alt="Project 4" />
-            <div class="project-title">Determination of Operational Limit for a Conduction Cooled 6U Versa Module Eurocard</div>
-          </div>
+        <div class="project-item">
+          <img src="projects/IJAER.JPG" alt="Project 3" />
+          <div class="project-title">A Numerical Investigation on Flow Characteristics of Jets Emerging from a Multi-Lobed Nozzle with Pointed Corrugations</div>
+        </div>
 
+        <div class="project-item">
+          <img src="projects/IJSR.JPG" alt="Project 4" />
+          <div class="project-title">Determination of Operational Limit for a Conduction Cooled 6U Versa Module Eurocard</div>
         </div>
       </div>
-
-      <!-- Freelance Projects (Right side of full screen) -->
-      <div class="projects-column">
-        <h2>Freelance Projects</h2>
-        <div class="project-list">
-
-          <div class="project-item">
-            <img src="projects/pick.JPG" alt="Project 5" />
-            <div class="project-title">Precision Tool Design for Pick-and-Place Applications in Manufacturing</div>
-          </div>
-
-        </div>
-      </div>
-
     </div>
+
+    <!-- Freelance Projects - Right Half -->
+    <div class="projects-column">
+      <h2>Freelance Projects</h2>
+      <div class="project-list">
+        <div class="project-item">
+          <img src="projects/pick.JPG" alt="Project 5" />
+          <div class="project-title">Precision Tool Design for Pick-and-Place Applications in Manufacturing</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- Footer -->
