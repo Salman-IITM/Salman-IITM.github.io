@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
     .project-page .main-content {
-      max-width: 1100px;
-      margin: 20px auto;
-      padding: 0; /* Remove side padding */
+      width: 100vw; /* Full screen width */
+      margin: 0;
+      padding: 0;
     }
 
     .projects-columns {
@@ -18,14 +18,14 @@
     }
 
     .projects-column {
-      width: 50%;
+      width: 50vw; /* Half of the viewport width */
       box-sizing: border-box;
-      padding: 0; /* No internal padding */
+      padding: 0 20px;
     }
 
     .projects-column h2 {
       font-size: 1.4rem;
-      margin: 0 0 15px 20px;
+      margin-bottom: 15px;
       color: #333;
     }
 
@@ -40,7 +40,7 @@
       align-items: center;
       gap: 20px;
       border-bottom: 1px solid #ddd;
-      padding: 0 20px 12px 20px;
+      padding-bottom: 12px;
     }
 
     .project-item img {
@@ -64,11 +64,7 @@
       }
 
       .projects-column {
-        width: 100%;
-      }
-
-      .projects-column h2 {
-        margin-left: 20px;
+        width: 100vw;
       }
 
       .project-item {
@@ -101,7 +97,7 @@
   <div class="main-content">
     <div class="projects-columns">
       
-      <!-- Academic Projects (Leftmost) -->
+      <!-- Academic Projects (Left side of full screen) -->
       <div class="projects-column">
         <h2>Academic Projects</h2>
         <div class="project-list">
@@ -129,7 +125,7 @@
         </div>
       </div>
 
-      <!-- Freelance Projects (Starts at Center) -->
+      <!-- Freelance Projects (Right side of full screen) -->
       <div class="projects-column">
         <h2>Freelance Projects</h2>
         <div class="project-list">
