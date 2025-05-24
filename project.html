@@ -14,13 +14,13 @@
 
     .projects-columns {
       display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
+      width: 100%;
     }
 
     .projects-column {
-      flex: 1;
-      min-width: 300px;
+      width: 50%;
+      box-sizing: border-box;
+      padding: 0 20px;
     }
 
     .projects-column h2 {
@@ -58,9 +58,14 @@
       color: #222;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
       .projects-columns {
         flex-direction: column;
+      }
+
+      .projects-column {
+        width: 100%;
+        padding: 0;
       }
 
       .project-item {
@@ -92,7 +97,8 @@
   <!-- Main Content -->
   <div class="main-content">
     <div class="projects-columns">
-      <!-- Academic Projects -->
+      
+      <!-- Academic Projects (Left 50%) -->
       <div class="projects-column">
         <h2>Academic Projects</h2>
         <div class="project-list">
@@ -120,7 +126,7 @@
         </div>
       </div>
 
-      <!-- Freelance Projects -->
+      <!-- Freelance Projects (Right 50%) -->
       <div class="projects-column">
         <h2>Freelance Projects</h2>
         <div class="project-list">
@@ -132,6 +138,7 @@
 
         </div>
       </div>
+
     </div>
   </div>
 
