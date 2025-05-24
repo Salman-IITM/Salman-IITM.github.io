@@ -6,20 +6,97 @@
   <title>GitHub Profile - Salman Shah</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Add these styles or put them in your styles.css */
+    /* Layout for main profile info */
     .profile-info {
       display: flex;
       align-items: flex-start;
       gap: 20px; /* space between image and text */
+      flex-wrap: wrap; /* for responsiveness */
     }
+
     .profile-info img {
       width: 144px;
       height: 300px;
       object-fit: cover;
       border-radius: 8px;
     }
+
     .profile-text {
-      max-width: 500px;
+      max-width: 100%;
+      flex: 1;
+    }
+
+    /* Columns layout */
+    .columns-container {
+      display: flex;
+      gap: 30px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .column h2 {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    .column ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .column ul li {
+      margin-bottom: 6px;
+    }
+
+    /* Header and footer styling (optional) */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f0f0f0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .name {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 10px;
+      background-color: #f0f0f0;
     }
   </style>
 </head>
@@ -45,7 +122,33 @@
       <div class="profile-text">
         <h1>About me</h1>
         <p>A Researcher, Teacher and Simple Human being.</p>
-        
+
+        <div class="columns-container">
+          <div class="column">
+            <h2>Education</h2>
+            <ul>
+              <li>PhD in Computer Science</li>
+              <li>MSc in Data Science</li>
+              <li>BSc in Mathematics</li>
+            </ul>
+          </div>
+          <div class="column">
+            <h2>Interests</h2>
+            <ul>
+              <li>Machine Learning</li>
+              <li>Philosophy</li>
+              <li>Photography</li>
+            </ul>
+          </div>
+          <div class="column">
+            <h2>Current Role</h2>
+            <ul>
+              <li>Assistant Professor</li>
+              <li>Research Supervisor</li>
+              <li>Curriculum Designer</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   </main>
