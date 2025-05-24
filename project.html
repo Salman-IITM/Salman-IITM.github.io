@@ -6,19 +6,23 @@
   <title>Projects - Salman Shah</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    body {
+    /* Reset any unwanted body margins */
+    body, html {
       margin: 0;
+      padding: 0;
     }
 
     .project-page .main-content {
-      width: 100vw;
+      position: relative;
+      width: 100vw; /* Full screen width */
       display: flex;
-      padding: 0;
+      flex-direction: row;
       margin: 0;
+      padding: 0;
     }
 
     .projects-column {
-      width: 50vw;
+      width: 50vw; /* Exact half of screen */
       padding: 20px;
       box-sizing: border-box;
     }
@@ -58,6 +62,7 @@
       color: #222;
     }
 
+    /* Mobile responsiveness */
     @media (max-width: 800px) {
       .main-content {
         flex-direction: column;
@@ -95,8 +100,7 @@
 
   <!-- Main Content -->
   <div class="main-content">
-
-    <!-- Academic Projects - Left Half -->
+    <!-- Academic Projects (Left) -->
     <div class="projects-column">
       <h2>Academic Projects</h2>
       <div class="project-list">
@@ -122,7 +126,7 @@
       </div>
     </div>
 
-    <!-- Freelance Projects - Right Half -->
+    <!-- Freelance Projects (Right) -->
     <div class="projects-column">
       <h2>Freelance Projects</h2>
       <div class="project-list">
@@ -132,7 +136,6 @@
         </div>
       </div>
     </div>
-
   </div>
 
   <!-- Footer -->
