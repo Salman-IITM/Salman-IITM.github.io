@@ -6,30 +6,26 @@
   <title>Projects - Salman Shah</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Reset any unwanted body margins */
-    body, html {
-      margin: 0;
-      padding: 0;
+    .project-page .main-content {
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 0; /* Remove side padding */
     }
 
-    .project-page .main-content {
-      position: relative;
-      width: 100vw; /* Full screen width */
+    .projects-columns {
       display: flex;
-      flex-direction: row;
-      margin: 0;
-      padding: 0;
+      width: 100%;
     }
 
     .projects-column {
-      width: 50vw; /* Exact half of screen */
-      padding: 20px;
+      width: 50%;
       box-sizing: border-box;
+      padding: 0; /* No internal padding */
     }
 
     .projects-column h2 {
       font-size: 1.4rem;
-      margin-bottom: 15px;
+      margin: 0 0 15px 20px;
       color: #333;
     }
 
@@ -44,7 +40,7 @@
       align-items: center;
       gap: 20px;
       border-bottom: 1px solid #ddd;
-      padding-bottom: 12px;
+      padding: 0 20px 12px 20px;
     }
 
     .project-item img {
@@ -62,14 +58,17 @@
       color: #222;
     }
 
-    /* Mobile responsiveness */
     @media (max-width: 800px) {
-      .main-content {
+      .projects-columns {
         flex-direction: column;
       }
 
       .projects-column {
-        width: 100vw;
+        width: 100%;
+      }
+
+      .projects-column h2 {
+        margin-left: 20px;
       }
 
       .project-item {
@@ -100,41 +99,49 @@
 
   <!-- Main Content -->
   <div class="main-content">
-    <!-- Academic Projects (Left) -->
-    <div class="projects-column">
-      <h2>Academic Projects</h2>
-      <div class="project-list">
-        <div class="project-item">
-          <img src="projects/wosc.JPG" alt="Project 2" />
-          <div class="project-title">Effect of Spatial Distribution of Sinker Arrays on Volume Deformation in Offshore Aquaculture Cages</div>
-        </div>
+    <div class="projects-columns">
+      
+      <!-- Academic Projects (Leftmost) -->
+      <div class="projects-column">
+        <h2>Academic Projects</h2>
+        <div class="project-list">
 
-        <div class="project-item">
-          <img src="projects/dpm.jpeg" alt="Project 1" />
-          <div class="project-title">Numerical investigation on Fuel Jet Dynamics using Discrete Phase Model in Diesel engine</div>
-        </div>
+          <div class="project-item">
+            <img src="projects/wosc.JPG" alt="Project 2" />
+            <div class="project-title">Effect of Spatial Distribution of Sinker Arrays on Volume Deformation in Offshore Aquaculture Cages</div>
+          </div>
+          
+          <div class="project-item">
+            <img src="projects/dpm.jpeg" alt="Project 1" />
+            <div class="project-title">Numerical investigation on Fuel Jet Dynamics using Discrete Phase Model in Diesel engine</div>
+          </div>
 
-        <div class="project-item">
-          <img src="projects/IJAER.JPG" alt="Project 3" />
-          <div class="project-title">A Numerical Investigation on Flow Characteristics of Jets Emerging from a Multi-Lobed Nozzle with Pointed Corrugations</div>
-        </div>
+          <div class="project-item">
+            <img src="projects/IJAER.JPG" alt="Project 3" />
+            <div class="project-title">A Numerical Investigation on Flow Characteristics of Jets Emerging from a Multi-Lobed Nozzle with Pointed Corrugations</div>
+          </div>
 
-        <div class="project-item">
-          <img src="projects/IJSR.JPG" alt="Project 4" />
-          <div class="project-title">Determination of Operational Limit for a Conduction Cooled 6U Versa Module Eurocard</div>
+          <div class="project-item">
+            <img src="projects/IJSR.JPG" alt="Project 4" />
+            <div class="project-title">Determination of Operational Limit for a Conduction Cooled 6U Versa Module Eurocard</div>
+          </div>
+
         </div>
       </div>
-    </div>
 
-    <!-- Freelance Projects (Right) -->
-    <div class="projects-column">
-      <h2>Freelance Projects</h2>
-      <div class="project-list">
-        <div class="project-item">
-          <img src="projects/pick.JPG" alt="Project 5" />
-          <div class="project-title">Precision Tool Design for Pick-and-Place Applications in Manufacturing</div>
+      <!-- Freelance Projects (Starts at Center) -->
+      <div class="projects-column">
+        <h2>Freelance Projects</h2>
+        <div class="project-list">
+
+          <div class="project-item">
+            <img src="projects/pick.JPG" alt="Project 5" />
+            <div class="project-title">Precision Tool Design for Pick-and-Place Applications in Manufacturing</div>
+          </div>
+
         </div>
       </div>
+
     </div>
   </div>
 
