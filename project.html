@@ -6,14 +6,29 @@
   <title>Projects - Salman Shah</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Left align main content only on project page */
     .project-page .main-content {
-      max-width: 900px;
-      margin: 20px 0 20px 20px;
-      padding: 0 20px 0 0;
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 0 20px;
     }
 
-    /* Main content layout for project page */
+    .projects-columns {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .projects-column {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .projects-column h2 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
     .project-list {
       display: flex;
       flex-direction: column;
@@ -44,6 +59,10 @@
     }
 
     @media (max-width: 600px) {
+      .projects-columns {
+        flex-direction: column;
+      }
+
       .project-item {
         flex-direction: column;
         align-items: flex-start;
@@ -72,32 +91,46 @@
 
   <!-- Main Content -->
   <div class="main-content">
-    <h1></h1>
-    <div class="project-list">
+    <div class="projects-columns">
+      <!-- Academic Projects -->
+      <div class="projects-column">
+        <h2>Academic Projects</h2>
+        <div class="project-list">
 
-      <div class="project-item">
-        <img src="projects/wosc.JPG" alt="Project 2" />
-        <div class="project-title">Effect of Spatial Distribution of Sinker Arrays on Volume Deformation in Offshore Aquaculture Cages</div>
-      </div>
-      
-      <div class="project-item">
-        <img src="projects/dpm.jpeg" alt="Project 1" />
-        <div class="project-title">Numerical investigation on Fuel Jet Dynamics using Discrete Phase Model in Diesel engine</div>
+          <div class="project-item">
+            <img src="projects/wosc.JPG" alt="Project 2" />
+            <div class="project-title">Effect of Spatial Distribution of Sinker Arrays on Volume Deformation in Offshore Aquaculture Cages</div>
+          </div>
+          
+          <div class="project-item">
+            <img src="projects/dpm.jpeg" alt="Project 1" />
+            <div class="project-title">Numerical investigation on Fuel Jet Dynamics using Discrete Phase Model in Diesel engine</div>
+          </div>
+
+          <div class="project-item">
+            <img src="projects/IJAER.JPG" alt="Project 3" />
+            <div class="project-title">A Numerical Investigation on Flow Characteristics of Jets Emerging from a Multi-Lobed Nozzle with Pointed Corrugations</div>
+          </div>
+
+          <div class="project-item">
+            <img src="projects/IJSR.JPG" alt="Project 4" />
+            <div class="project-title">Determination of Operational Limit for a Conduction Cooled 6U Versa Module Eurocard</div>
+          </div>
+
+        </div>
       </div>
 
-      <div class="project-item">
-        <img src="projects/IJAER.JPG" alt="Project 3" />
-        <div class="project-title">A Numerical Investigation on Flow Characteristics of Jets Emerging from a Multi-Lobed Nozzle with Pointed Corrugations</div>
-      </div>
+      <!-- Freelance Projects -->
+      <div class="projects-column">
+        <h2>Freelance Projects</h2>
+        <div class="project-list">
 
-      <div class="project-item">
-        <img src="projects/IJSR.JPG" alt="Project 4" />
-        <div class="project-title">Determination of Operational Limit for a Conduction Cooled 6U Versa Module Eurocard</div>
-      </div>
+          <div class="project-item">
+            <img src="projects/pick.JPG" alt="Project 5" />
+            <div class="project-title">Precision Tool Design for Pick-and-Place Applications in Manufacturing</div>
+          </div>
 
-      <div class="project-item">
-        <img src="projects/pick.JPG" alt="Project 5" />
-        <div class="project-title">Precision Tool Design for Pick-and-Place Applications in Manufacturing</div>
+        </div>
       </div>
     </div>
   </div>
