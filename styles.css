@@ -296,3 +296,28 @@ background: black; /* to avoid empty areas looking ugly */
   box-shadow: 0 8px 16px rgba(0,0,0,0.3);
   z-index: 2; /* so zoom appears on top */
 }
+.columns-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Responsive wrapping */
+}
+
+.column {
+  flex: 1;
+  min-width: 150px;
+}
+
+.column h2 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.column ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.column ul li {
+  margin-bottom: 6px;
+}
