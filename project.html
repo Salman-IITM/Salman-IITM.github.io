@@ -9,7 +9,7 @@
     .project-page .main-content {
       max-width: 1100px;
       margin: 20px auto;
-      padding: 0 20px;
+      padding: 0; /* Remove side padding */
     }
 
     .projects-columns {
@@ -20,12 +20,12 @@
     .projects-column {
       width: 50%;
       box-sizing: border-box;
-      padding: 0 20px;
+      padding: 0; /* No internal padding */
     }
 
     .projects-column h2 {
       font-size: 1.4rem;
-      margin-bottom: 15px;
+      margin: 0 0 15px 20px;
       color: #333;
     }
 
@@ -40,7 +40,7 @@
       align-items: center;
       gap: 20px;
       border-bottom: 1px solid #ddd;
-      padding-bottom: 12px;
+      padding: 0 20px 12px 20px;
     }
 
     .project-item img {
@@ -65,7 +65,10 @@
 
       .projects-column {
         width: 100%;
-        padding: 0;
+      }
+
+      .projects-column h2 {
+        margin-left: 20px;
       }
 
       .project-item {
@@ -98,7 +101,7 @@
   <div class="main-content">
     <div class="projects-columns">
       
-      <!-- Academic Projects (Left 50%) -->
+      <!-- Academic Projects (Leftmost) -->
       <div class="projects-column">
         <h2>Academic Projects</h2>
         <div class="project-list">
@@ -126,7 +129,7 @@
         </div>
       </div>
 
-      <!-- Freelance Projects (Right 50%) -->
+      <!-- Freelance Projects (Starts at Center) -->
       <div class="projects-column">
         <h2>Freelance Projects</h2>
         <div class="project-list">
