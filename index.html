@@ -5,23 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Salman Shah, Research Scholar</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Vanta.js and Three.js for ocean animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="dp.jpg" alt="Salman Shah's Photo">
-      <div class="name">Salman Shah</div>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="profile.html">Profile Overview</a></li>
-        <li><a href="project.html">Projects</a></li>
-        <li><a href="articles.html">Articles</a></li>
-        <li><a href="repos.html">Repositories</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Ocean animation header container -->
+  <div id="ocean-header" style="width: 100%; height: 300px; position: relative;">
+    <header style="position: relative; z-index: 1; color: white;">
+      <div class="logo">
+        <img src="dp.jpg" alt="Salman Shah's Photo">
+        <div class="name">Salman Shah</div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="profile.html">Profile Overview</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="repos.html">Repositories</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
 
   <div class="main-content">
     <aside class="sidebar">
@@ -42,44 +48,37 @@
         <li><a href="#">Patents</a></li>
       </ul>
       <a href="https://orcid.org/my-orcid?orcid=0009-0003-4979-7137" target="_blank" rel="noopener noreferrer">
-  <img src="gallery/ORCID.svg" alt="ORCID" width="120" height="40">
-</a>
+        <img src="gallery/ORCID.svg" alt="ORCID" width="120" height="40">
+      </a>
     </aside>
-
-    
 
     <section class="articles">
       <h1>Recently published</h1>
       <article>
-        <h2>Effect of Spatial Distribution of Sinker Arrays on Volume Deformation in Offshore
-Aquaculture Cages</h2>
+        <h2>Effect of Spatial Distribution of Sinker Arrays on Volume Deformation in Offshore Aquaculture Cages</h2>
         <p>Studies on optimizing aquaculture cages for deep water offshore environments has gained recognition lately. Due to persistent issues of pollutant accumulation and nearshore exploitations in many other forms, investigations are conducted on gravity cages...</p>
         <a href="https://www.niot.res.in/WOSC2024/documents/WOSC_2024_FINAL_Version_15.03.2024.pdf">Read more</a>
       </article>
       <article>
-        <h2>A Numerical Investigation on Flow Characteristics of Jets Emerging from a Multi-Lobed Nozzle with Pointed Corrugations </h2>
+        <h2>A Numerical Investigation on Flow Characteristics of Jets Emerging from a Multi-Lobed Nozzle with Pointed Corrugations</h2>
         <p>One of the significant properties of fluids in motion is that they adjust to succumb to their environments. The various dynamic physics are merely the outcome of these adjustments. Nozzles transform pressure energy of fluids into kinetic energy using ...</p>
         <a href="https://www.ripublication.com/ijaer23/ijaerv18n1_04.pdf">Read more</a>
       </article>
     </section>
   </div>
-  
+
   <!-- Video Thumbnails Section -->
   <section class="video-thumbnails">
     <h2>Few Rendered Simulations</h2>
     <div class="videos-container">
       <video src="videos/lab1.mp4" muted preload="metadata" onmouseenter="this.playbackRate=2; this.play()" 
-       onmouseleave="this.pause(); this.currentTime=0; this.playbackRate=1;">
-</video>
+       onmouseleave="this.pause(); this.currentTime=0; this.playbackRate=1;"></video>
       <video src="videos/lab2.mp4" muted preload="metadata" onmouseenter="this.playbackRate=2; this.play()" 
-       onmouseleave="this.pause(); this.currentTime=0; this.playbackRate=1;">
-</video>
+       onmouseleave="this.pause(); this.currentTime=0; this.playbackRate=1;"></video>
       <video src="videos/lab3.mp4" muted preload="metadata" onmouseenter="this.playbackRate=2; this.play()" 
-       onmouseleave="this.pause(); this.currentTime=0; this.playbackRate=1;">
-</video>
+       onmouseleave="this.pause(); this.currentTime=0; this.playbackRate=1;"></video>
       <video src="videos/aqua.mp4" muted preload="metadata" onmouseenter="this.playbackRate=2; this.play()" 
-       onmouseleave="this.pause(); this.currentTime=0; this.playbackRate=1;">
-</video>
+       onmouseleave="this.pause(); this.currentTime=0; this.playbackRate=1;"></video>
     </div>
   </section>
 
@@ -96,12 +95,22 @@ Aquaculture Cages</h2>
 
   <footer>
     <p>
-    <img src="https://visitor-badge.laobi.icu/badge?page_id=salman-iitm.index" alt="Visitors Count" />
-  </p>
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=salman-iitm.index" alt="Visitors Count" />
+    </p>
     <p>&copy; Salman Shah, Doctoral Research Scholar, Department of Ocean Engineering, IIT Madras, India.</p>
   </footer>
 
   <script src="script.js"></script>
-
+  <!-- Initialize Vanta Waves -->
+  <script>
+    VANTA.WAVES({
+      el: "#ocean-header",
+      color: 0x006994,
+      waveHeight: 20,
+      shininess: 50,
+      waveSpeed: 1.5,
+      zoom: 1.2
+    });
+  </script>
 </body>
 </html>
