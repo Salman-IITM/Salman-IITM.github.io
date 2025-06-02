@@ -51,6 +51,7 @@ header nav ul li {
 header nav ul li a {
   color: white;
   text-decoration: none;
+  font-size: 1.2em;
   font-weight: bold;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   padding: 5px 10px;
