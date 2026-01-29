@@ -1,104 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salman Shah, Research Scholar</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Vanta.js and Three.js for ocean animation -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salman Shah | Research Scholar</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Three.js + Vanta -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
 </head>
+
 <body>
-  <!-- Ocean animation header container -->
-  <header id="ocean-header" style="height: 200px; position: relative; color: white;">
-  <div class="logo" style="position: relative; z-index: 1;">
-    <img src="dp.jpg" alt="Salman Shah's Photo">
-    <div class="name">Salman Shah</div>
-  </div>
-  <nav style="position: relative; z-index: 1;">
-    <ul>
-      <li><a href="profile.html">Profile Overview</a></li>
-      <li><a href="project.html">Projects</a></li>
-      <li><a href="articles.html">Articles</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
 
+  <!-- ================= HEADER ================= -->
+  <header id="ocean-header">
+    <div class="header-inner">
 
-  <div class="main-content">
+      <div class="logo">
+        <img src="dp.jpg" alt="Salman Shah">
+        <div class="name">
+          Salman Shah<br>
+          <span>Doctoral Research Scholar</span>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="main-content">
+
+    <!-- ===== Sidebar ===== -->
     <aside class="sidebar">
-      <h2>From Research Laboratory</h2>
+      <h2>Research Focus</h2>
       <ul>
-        <li><a href="#">Experiments</a></li>
-        <li><a href="#">Numerical modelling</a></li>
-        <li><a href="#">Tool based</a></li>
+        <li>Wave propagation & scattering</li>
+        <li>Porous & floating structures</li>
+        <li>Experimental hydrodynamics</li>
+        <li>Numerical modelling</li>
       </ul>
-       <h2>Conferences</h2>
+
+      <h2>Conferences</h2>
       <ul>
-        <li><a href="#">International</a></li>
-        <li><a href="#">National</a></li>
+        <li>International</li>
+        <li>National</li>
       </ul>
+
       <h2>Contributions</h2>
       <ul>
-        <li><a href="#">Published abstracts</a></li>
-        <li><a href="#">Patents</a></li>
+        <li>Journal articles</li>
+        <li>Conference abstracts</li>
+        <li>Patents</li>
       </ul>
-      <a href="https://orcid.org/0009-0003-4979-7137" target="_blank" rel="noopener noreferrer">
-        <img src="gallery/ORCID.svg" alt="ORCID" width="120" height="40">
+
+      <a href="https://orcid.org/0009-0003-4979-7137" target="_blank">
+        <img src="gallery/ORCID.svg" alt="ORCID">
       </a>
     </aside>
 
+    <!-- ===== Articles ===== -->
     <section class="articles">
-      <h1>Recently published</h1>
-      <article>
-        <h2 style="color: steelblue;">Gravity wave scattering by barge integrated porous cages</h2>
-        <p>Authors: Salman, S., Vijay, K. G., Behera, H., & Chen, J. T. (2025)</p>
-         <p>Physics of Fluids, AIP Publishing</p>
-        <a href="https://doi.org/10.1063/5.0278863" style="text-decoration: underline;">Read full article</a>
-      </article>
-       <article>
-         <h2 style="color: steelblue;">Numerical and experimental investigation on a dual pontoon supported compartmentalized porous cages</h2>
-        <p>Authors: Salman, S., Vijay, K. G., Nishad, C. S., & Chen, J. T. (2025)</p>
-         <p>Engineering Analysis with Boundary Elements, Elsevier</p>
-        <a href="https://www.sciencedirect.com/science/article/pii/S0955799725002413" style="text-decoration: underline;">Read full article</a>
-      </article>
-      <article>
-        <h2 style="color: steelblue;">Gravity wave scattering by barge integrated porous cages</h2>
-        <p>Authors: Salman, S., Vijay, K. G., Behera, H., & Chen, J. T. (2025)</p>
-         <p>Physics of Fluids, AIP Publishing</p>
-        <a href="https://doi.org/10.1063/5.0278863" style="text-decoration: underline;">Read full article</a>
-      </article>
-       <article>
-         <h2 style="color: steelblue;">Numerical and experimental investigation on a dual pontoon supported compartmentalized porous cages</h2>
-        <p>Authors: Salman, S., Vijay, K. G., Nishad, C. S., & Chen, J. T. (2025)</p>
-         <p>Engineering Analysis with Boundary Elements, Elsevier</p>
-        <a href="https://www.sciencedirect.com/science/article/pii/S0955799725002413" style="text-decoration: underline;">Read full article</a>
-      </article>
-      
-    </section>
-  </div>
+      <h1>Recently Published</h1>
 
-  
+      <article>
+        <h2>Gravity wave scattering by barge integrated porous cages</h2>
+        <p><strong>Salman, S.</strong>, Vijay, K. G., Behera, H., Chen, J. T. (2025)</p>
+        <p><em>Physics of Fluids</em>, AIP Publishing</p>
+        <a href="https://doi.org/10.1063/5.0278863" target="_blank">Read full article</a>
+      </article>
+
+      <article>
+        <h2>Numerical and experimental investigation on a dual pontoon supported compartmentalized porous cages</h2>
+        <p><strong>Salman, S.</strong>, Vijay, K. G., Nishad, C. S., Chen, J. T. (2025)</p>
+        <p><em>Engineering Analysis with Boundary Elements</em>, Elsevier</p>
+        <a href="https://www.sciencedirect.com/science/article/pii/S0955799725002413" target="_blank">
+          Read full article
+        </a>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
   <footer>
     <p>
-      <img src="https://visitor-badge.laobi.icu/badge?page_id=salman-iitm.index" alt="Visitors Count" />
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=salman-iitm.index" alt="Visitors">
     </p>
-    <p>&copy; Salman Shah, Doctoral Research Scholar, Department of Ocean Engineering, IIT Madras, India.</p>
+    <p>
+      © Salman Shah | Department of Ocean Engineering, IIT Madras
+    </p>
   </footer>
 
   <script src="script.js"></script>
-  <!-- Initialize Vanta Waves -->
-  <script>
-    VANTA.WAVES({
-      el: "#ocean-header",
-      color: 0x006994,
-      waveHeight: 25,
-      shininess: 150,
-      waveSpeed: 0.6,
-      zoom: 1.2
-    });
-  </script>
+
 </body>
 </html>
