@@ -98,6 +98,20 @@ nav a:hover {
   margin-top: 20px;
 }
 
+.awards-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.awards-list li {
+  margin-bottom: 0.9rem;
+  line-height: 1.4;
+}
+
+.awards-list span {
+  font-size: 0.9rem;
+  color: #666;
+}
 .sidebar ul {
   padding-left: 18px;
 }
