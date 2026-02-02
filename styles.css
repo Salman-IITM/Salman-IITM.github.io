@@ -168,18 +168,7 @@ footer {
   margin: 0 6px;
   vertical-align: middle;
 }
-.awards-images figure {
-  width: 100%;
-  height: 80px;          /* control size here */
-  object-fit: cover;     /* crop nicely */
-  border-radius: 8px;
-}
 
-.awards-images figcaption {
-  font-size: 0.85rem;
-  color: #555;
-  margin-top: 6px;
-}
 
 
 /* ========== MOBILE RESPONSIVE ========== */
