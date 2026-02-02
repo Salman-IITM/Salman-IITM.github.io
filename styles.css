@@ -156,6 +156,13 @@ footer {
   font-size: 0.9rem;
   margin-top: 30px;
 }
+.social-icon {
+  width: 28px;   /* adjust as needed */
+  height: auto;
+  margin: 0 6px;
+  vertical-align: middle;
+}
+
 
 /* ========== MOBILE RESPONSIVE ========== */
 @media (max-width: 768px) {
