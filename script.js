@@ -1,62 +1,18 @@
-/* ============================================================
-   SALMAN SHAH — SCIENTIST PORTFOLIO
-   Lightweight interaction
-   ============================================================ */
-
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* ----------------------------------------------------------
-     Scroll reveal
-     ---------------------------------------------------------- */
+  /*
+   * Smooth scrolling for internal navigation
+   */
 
-  const revealElements = document.querySelectorAll(
-    ".paper, .experience-row, .index-section"
-  );
-
-  const revealObserver = new IntersectionObserver(
-    function (entries, observer) {
-
-      entries.forEach(function (entry) {
-
-        if (entry.isIntersecting) {
-
-          entry.target.classList.add("visible");
-
-          observer.unobserve(entry.target);
-
-        }
-
-      });
-
-    },
-    {
-      threshold: 0.08
-    }
-  );
-
-
-  revealElements.forEach(function (element) {
-
-    revealObserver.observe(element);
-
-  });
-
-
-
-  /* ----------------------------------------------------------
-     Smooth navigation
-     ---------------------------------------------------------- */
-
-  const navigationLinks = document.querySelectorAll(
+  const links = document.querySelectorAll(
     '.nav-links a[href^="#"]'
   );
 
-  navigationLinks.forEach(function (link) {
+  links.forEach(function (link) {
 
     link.addEventListener("click", function (event) {
 
       const targetId = link.getAttribute("href");
-
       const target = document.querySelector(targetId);
 
       if (!target) {
@@ -75,40 +31,41 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-
-  /* ----------------------------------------------------------
-     Active navigation item
-     ---------------------------------------------------------- */
+  /*
+   * Highlight the current navigation section
+   */
 
   const sections = document.querySelectorAll(
     "#research, #publications, #experience, #recognition"
   );
 
-  const navItems = document.querySelectorAll(
+  const navLinks = document.querySelectorAll(
     ".nav-links a"
   );
 
 
-  const sectionObserver = new IntersectionObserver(
+  const observer = new IntersectionObserver(
     function (entries) {
 
       entries.forEach(function (entry) {
 
-        if (entry.isIntersecting) {
-
-          const id = entry.target.id;
-
-          navItems.forEach(function (item) {
-
-            item.classList.remove("active");
-
-            if (item.getAttribute("href") === "#" + id) {
-              item.classList.add("active");
-            }
-
-          });
-
+        if (!entry.isIntersecting) {
+          return;
         }
+
+        const currentId = entry.target.id;
+
+        navLinks.forEach(function (link) {
+
+          link.classList.remove("active");
+
+          if (
+            link.getAttribute("href") === "#" + currentId
+          ) {
+            link.classList.add("active");
+          }
+
+        });
 
       });
 
@@ -120,29 +77,72 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   sections.forEach(function (section) {
+    observer.observe(section);
+  });
 
-    sectionObserver.observe(section);
+
+  /*
+   * Small fade-in effect for publication and experience
+   * records.
+   */
+
+  const records = document.querySelectorAll(
+    ".paper, .experience"
+  );
+
+  const revealObserver = new IntersectionObserver(
+    function (entries) {
+
+      entries.forEach(function (entry) {
+
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add("show");
+
+          revealObserver.unobserve(entry.target);
+
+        }
+
+      });
+
+    },
+    {
+      threshold: 0.08
+    }
+  );
+
+
+  records.forEach(function (record) {
+
+    record.style.opacity = "0";
+    record.style.transform = "translateY(10px)";
+    record.style.transition =
+      "opacity 0.5s ease, transform 0.5s ease";
+
+    revealObserver.observe(record);
 
   });
 
 
+  /*
+   * Apply the visible state.
+   */
 
-  /* ----------------------------------------------------------
-     Add active styling
-     ---------------------------------------------------------- */
+  document.addEventListener(
+    "scroll",
+    function () {
 
-  const style = document.createElement("style");
+      document
+        .querySelectorAll(".show")
+        .forEach(function (element) {
 
-  style.textContent = `
-    .nav-links a.active {
-      color: #147493;
-    }
+          element.style.opacity = "1";
+          element.style.transform = "translateY(0)";
 
-    .nav-links a.active::after {
-      width: 100%;
-    }
-  `;
+        });
 
-  document.head.appendChild(style);
+    },
+    { passive: true }
+  );
 
 });
