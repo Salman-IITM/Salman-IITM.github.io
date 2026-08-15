@@ -1,18 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
+/* ============================================================
+   SALMAN SHAH
+   Academic Research Portfolio
+   ============================================================ */
 
-  /*
-   * Smooth scrolling for internal navigation
-   */
+document.addEventListener("DOMContentLoaded", () => {
 
-  const links = document.querySelectorAll(
-    '.nav-links a[href^="#"]'
-  );
+  /* ----------------------------------------------------------
+     Smooth navigation
+     ---------------------------------------------------------- */
 
-  links.forEach(function (link) {
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-    link.addEventListener("click", function (event) {
+    link.addEventListener("click", event => {
 
       const targetId = link.getAttribute("href");
+
+      if (!targetId || targetId === "#") {
+        return;
+      }
+
       const target = document.querySelector(targetId);
 
       if (!target) {
@@ -21,9 +27,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
       event.preventDefault();
 
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+      const header = document.querySelector(".topbar");
+
+      const headerHeight = header
+        ? header.offsetHeight
+        : 0;
+
+      const targetPosition =
+        target.getBoundingClientRect().top +
+        window.scrollY -
+        headerHeight -
+        16;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth"
       });
 
     });
@@ -31,12 +49,144 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
+  /* ----------------------------------------------------------
+     HERO RESEARCH VIDEO
+     ---------------------------------------------------------- */
+
+  const heroVideo =
+    document.querySelector(".hero-video video");
+
+
   /*
-   * Highlight the current navigation section
-   */
+     Try to start the video automatically.
+
+     Because the video is muted, modern browsers
+     normally allow autoplay.
+  */
+
+  if (heroVideo) {
+
+    heroVideo.muted = true;
+
+    const playVideo = () => {
+
+      const playPromise = heroVideo.play();
+
+      if (playPromise !== undefined) {
+
+        playPromise.catch(() => {
+          /*
+             Browser blocked autoplay.
+             The video will still work normally
+             if the user interacts with the page.
+          */
+        });
+
+      }
+
+    };
+
+    playVideo();
+
+  }
+
+
+  /* ----------------------------------------------------------
+     PAUSE VIDEO WHEN IT IS OFF SCREEN
+     ---------------------------------------------------------- */
+
+  if (
+    heroVideo &&
+    "IntersectionObserver" in window
+  ) {
+
+    const videoObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              heroVideo.play().catch(() => {});
+
+            } else {
+
+              heroVideo.pause();
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.15
+        }
+      );
+
+    videoObserver.observe(heroVideo);
+
+  }
+
+
+  /* ----------------------------------------------------------
+     SUBTLE VIDEO PARALLAX EFFECT
+     ---------------------------------------------------------- */
+
+  const hero =
+    document.querySelector(".hero");
+
+
+  if (hero && heroVideo) {
+
+    let ticking = false;
+
+    window.addEventListener(
+      "scroll",
+      () => {
+
+        if (!ticking) {
+
+          window.requestAnimationFrame(() => {
+
+            const scrollY =
+              Math.min(window.scrollY, 500);
+
+            /*
+              Very subtle zoom while scrolling.
+              This prevents the effect from looking flashy.
+            */
+
+            const scale =
+              1 + scrollY * 0.00005;
+
+            heroVideo.style.transform =
+              `scale(${scale})`;
+
+            ticking = false;
+
+          });
+
+          ticking = true;
+
+        }
+
+      },
+      {
+        passive: true
+      }
+    );
+
+  }
+
+
+  /* ----------------------------------------------------------
+     ACTIVE NAVIGATION
+     Highlights the section currently being viewed.
+     ---------------------------------------------------------- */
 
   const sections = document.querySelectorAll(
-    "#research, #publications, #experience, #recognition"
+    "main section[id]"
   );
 
   const navLinks = document.querySelectorAll(
@@ -44,105 +194,117 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
 
-  const observer = new IntersectionObserver(
-    function (entries) {
+  if (
+    sections.length &&
+    navLinks.length &&
+    "IntersectionObserver" in window
+  ) {
 
-      entries.forEach(function (entry) {
+    const sectionObserver =
+      new IntersectionObserver(
+        entries => {
 
-        if (!entry.isIntersecting) {
+          entries.forEach(entry => {
+
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+            const currentId =
+              entry.target.getAttribute("id");
+
+            navLinks.forEach(link => {
+
+              const linkTarget =
+                link.getAttribute("href");
+
+              if (
+                linkTarget === `#${currentId}`
+              ) {
+
+                link.classList.add("active");
+
+              } else {
+
+                link.classList.remove("active");
+
+              }
+
+            });
+
+          });
+
+        },
+        {
+          rootMargin:
+            "-25% 0px -65% 0px"
+        }
+      );
+
+
+    sections.forEach(section => {
+      sectionObserver.observe(section);
+    });
+
+  }
+
+
+  /* ----------------------------------------------------------
+     IMAGE FALLBACK
+     ---------------------------------------------------------- */
+
+  const profileImage =
+    document.querySelector(".profile-photo img");
+
+
+  if (profileImage) {
+
+    profileImage.addEventListener(
+      "error",
+      () => {
+
+        profileImage.style.display =
+          "none";
+
+        profileImage.parentElement
+          .classList.add("photo-missing");
+
+      }
+    );
+
+  }
+
+
+  /* ----------------------------------------------------------
+     VIDEO ERROR HANDLING
+     ---------------------------------------------------------- */
+
+  if (heroVideo) {
+
+    heroVideo.addEventListener(
+      "error",
+      () => {
+
+        const videoContainer =
+          document.querySelector(".hero-video");
+
+        if (!videoContainer) {
           return;
         }
 
-        const currentId = entry.target.id;
+        /*
+          If the video cannot load, keep the
+          hero visually attractive instead of
+          showing a broken video element.
+        */
 
-        navLinks.forEach(function (link) {
+        videoContainer.classList.add(
+          "video-unavailable"
+        );
 
-          link.classList.remove("active");
+      }
+    );
 
-          if (
-            link.getAttribute("href") === "#" + currentId
-          ) {
-            link.classList.add("active");
-          }
-
-        });
-
-      });
-
-    },
-    {
-      rootMargin: "-20% 0px -65% 0px"
-    }
-  );
-
-
-  sections.forEach(function (section) {
-    observer.observe(section);
-  });
-
-
-  /*
-   * Small fade-in effect for publication and experience
-   * records.
-   */
-
-  const records = document.querySelectorAll(
-    ".paper, .experience"
-  );
-
-  const revealObserver = new IntersectionObserver(
-    function (entries) {
-
-      entries.forEach(function (entry) {
-
-        if (entry.isIntersecting) {
-
-          entry.target.classList.add("show");
-
-          revealObserver.unobserve(entry.target);
-
-        }
-
-      });
-
-    },
-    {
-      threshold: 0.08
-    }
-  );
-
-
-  records.forEach(function (record) {
-
-    record.style.opacity = "0";
-    record.style.transform = "translateY(10px)";
-    record.style.transition =
-      "opacity 0.5s ease, transform 0.5s ease";
-
-    revealObserver.observe(record);
-
-  });
-
-
-  /*
-   * Apply the visible state.
-   */
-
-  document.addEventListener(
-    "scroll",
-    function () {
-
-      document
-        .querySelectorAll(".show")
-        .forEach(function (element) {
-
-          element.style.opacity = "1";
-          element.style.transform = "translateY(0)";
-
-        });
-
-    },
-    { passive: true }
-  );
+  }
 
 });
