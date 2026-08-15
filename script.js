@@ -1,45 +1,148 @@
 /* ============================================================
-   SALMAN SHAH — ACADEMIC WEBSITE
-   Subtle Vanta ocean background
+   SALMAN SHAH — SCIENTIST PORTFOLIO
+   Lightweight interaction
    ============================================================ */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  if (
-    typeof VANTA !== "undefined" &&
-    typeof VANTA.WAVES === "function"
-  ) {
+  /* ----------------------------------------------------------
+     Scroll reveal
+     ---------------------------------------------------------- */
 
-    VANTA.WAVES({
+  const revealElements = document.querySelectorAll(
+    ".paper, .experience-row, .index-section"
+  );
 
-      el: "#ocean-header",
+  const revealObserver = new IntersectionObserver(
+    function (entries, observer) {
 
-      mouseControls: true,
+      entries.forEach(function (entry) {
 
-      touchControls: true,
+        if (entry.isIntersecting) {
 
-      gyroControls: false,
+          entry.target.classList.add("visible");
 
-      minHeight: 200.00,
+          observer.unobserve(entry.target);
 
-      minWidth: 200.00,
+        }
 
-      scale: 1.00,
+      });
 
-      scaleMobile: 1.00,
+    },
+    {
+      threshold: 0.08
+    }
+  );
 
-      color: 0x07506b,
 
-      shininess: 35,
+  revealElements.forEach(function (element) {
 
-      waveHeight: 12,
+    revealObserver.observe(element);
 
-      waveSpeed: 0.35,
+  });
 
-      zoom: 1.05
+
+
+  /* ----------------------------------------------------------
+     Smooth navigation
+     ---------------------------------------------------------- */
+
+  const navigationLinks = document.querySelectorAll(
+    '.nav-links a[href^="#"]'
+  );
+
+  navigationLinks.forEach(function (link) {
+
+    link.addEventListener("click", function (event) {
+
+      const targetId = link.getAttribute("href");
+
+      const target = document.querySelector(targetId);
+
+      if (!target) {
+        return;
+      }
+
+      event.preventDefault();
+
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
 
     });
 
-  }
+  });
+
+
+
+  /* ----------------------------------------------------------
+     Active navigation item
+     ---------------------------------------------------------- */
+
+  const sections = document.querySelectorAll(
+    "#research, #publications, #experience, #recognition"
+  );
+
+  const navItems = document.querySelectorAll(
+    ".nav-links a"
+  );
+
+
+  const sectionObserver = new IntersectionObserver(
+    function (entries) {
+
+      entries.forEach(function (entry) {
+
+        if (entry.isIntersecting) {
+
+          const id = entry.target.id;
+
+          navItems.forEach(function (item) {
+
+            item.classList.remove("active");
+
+            if (item.getAttribute("href") === "#" + id) {
+              item.classList.add("active");
+            }
+
+          });
+
+        }
+
+      });
+
+    },
+    {
+      rootMargin: "-20% 0px -65% 0px"
+    }
+  );
+
+
+  sections.forEach(function (section) {
+
+    sectionObserver.observe(section);
+
+  });
+
+
+
+  /* ----------------------------------------------------------
+     Add active styling
+     ---------------------------------------------------------- */
+
+  const style = document.createElement("style");
+
+  style.textContent = `
+    .nav-links a.active {
+      color: #147493;
+    }
+
+    .nav-links a.active::after {
+      width: 100%;
+    }
+  `;
+
+  document.head.appendChild(style);
 
 });
