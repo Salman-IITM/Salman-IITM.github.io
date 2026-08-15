@@ -13,20 +13,58 @@ body {
 
 /* ========== HEADER ========== */
 #ocean-header {
-  height: 240px;
   position: relative;
+  height: 300px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(39, 129, 170, 0.35),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #061923 0%,
+      #0a2b3d 45%,
+      #07506b 100%
+    );
+
   color: white;
 }
 
+
+/* Subtle ocean glow */
+
+.ocean-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      ellipse at 20% 100%,
+      rgba(0, 180, 210, 0.18),
+      transparent 45%
+    );
+
+  pointer-events: none;
+}
+
+
+/* Main header content */
+
 .header-inner {
   position: relative;
-  z-index: 2;
+  z-index: 5;
+
   max-width: 1200px;
-  margin: auto;
-  padding: 20px;
+  height: 100%;
+
+  margin: 0 auto;
+  padding: 35px 30px;
+
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 /* Logo */
