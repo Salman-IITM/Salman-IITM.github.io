@@ -124,12 +124,36 @@ a {
 
 .hero {
   position: relative;
+  overflow: hidden;
 
   background: linear-gradient(
-    115deg,
-    #FF6C00 0%,
-  #E85D00 100%
+    120deg,
+    #0d2638,
+    #123f56,
+    #17627a,
+    #123f56,
+    #0d2638
   );
+
+  background-size: 300% 300%;
+  animation: researchFlow 18s ease infinite;
+
+  color: white;
+}
+
+@keyframes researchFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
   color: white;
 }
