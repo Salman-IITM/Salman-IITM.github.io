@@ -124,16 +124,17 @@ a {
 
 .hero {
   position: relative;
-  overflow: hidden;
 
   background: linear-gradient(
-    120deg,
-    #0d2638,
-    #123f56,
-    #17627a,
-    #123f56,
-    #0d2638
+    115deg,
+    #123d51 0%,
+    #18566d 100%
   );
+
+  color: white;
+
+  overflow: hidden;
+}
 
   background-size: 300% 300%;
   animation: researchFlow 18s ease infinite;
@@ -161,18 +162,18 @@ a {
 .hero-inner {
   max-width: 1240px;
 
-  min-height: 300px;
+  min-height: 390px;
 
   margin: auto;
-  padding: 42px 28px;
+  padding: 0 28px;
 
   display: grid;
 
-  grid-template-columns: 150px 1fr 180px;
+  grid-template-columns: 150px minmax(0, 1fr) 430px;
 
-  align-items: center;
+  align-items: stretch;
 
-  gap: 30px;
+  gap: 35px;
 }
 
 
@@ -267,9 +268,107 @@ a {
 /* Right header information */
 
 .profile-side {
-  padding-left: 25px;
+  position: relative;
 
-  border-left: 1px solid rgba(255,255,255,0.22);
+  min-width: 0;
+  padding-left: 0;
+
+  border-left: none;
+
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   HERO RESEARCH VIDEO
+   ============================================================ */
+
+.hero-video {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 390px;
+
+  overflow: hidden;
+
+  background: #0b2938;
+}
+
+.hero-video video {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* Darken the footage slightly */
+
+.video-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(13, 49, 65, 0.82) 0%,
+      rgba(13, 49, 65, 0.28) 55%,
+      rgba(13, 49, 65, 0.12) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* Research statistics over the video */
+
+.research-stat {
+  position: absolute;
+
+  left: 28px;
+  bottom: 28px;
+
+  z-index: 2;
+
+  color: white;
+}
+
+.research-stat .side-label {
+  color: rgba(255,255,255,0.78);
+
+  font-size: 0.58rem;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.research-stat .side-number {
+  margin-top: 3px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 3.5rem;
+
+  line-height: 1;
+}
+
+.research-stat .side-text {
+  margin-top: 6px;
+
+  color: rgba(255,255,255,0.72);
+
+  font-size: 0.68rem;
+
+  line-height: 1.4;
 }
 
 .side-label {
@@ -871,7 +970,9 @@ footer {
   .hero-inner {
     grid-template-columns: 130px 1fr;
 
-    padding: 38px 22px;
+    padding: 35px 22px;
+
+    min-height: 360px;
   }
 
   .profile-side {
@@ -887,9 +988,7 @@ footer {
   .sidebar {
     position: static;
   }
-
 }
-
 
 @media (max-width: 650px) {
 
