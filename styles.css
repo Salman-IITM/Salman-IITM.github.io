@@ -457,3 +457,21 @@ a{ color: inherit; }
   .wavetank-grid{ grid-template-columns: 1fr; }
   .tank-canvas{ height: 190px; }
 }
+.video-frame{
+  border: 1px solid var(--contour);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--ink);
+  line-height: 0;
+}
+.video-frame video{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.video-caption{
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--paper-dim);
+  margin: 14px 0 0;
+}
