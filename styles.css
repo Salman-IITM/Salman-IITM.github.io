@@ -149,49 +149,63 @@ a{ color: inherit; }
 /* ============================================================
    WAVE TANK — signature element
    ============================================================ */
-.wavetank{
+.wavetank-section{
   max-width: var(--max);
   margin: 0 auto;
-  position: relative;
   border-top: 1px solid var(--contour-dim);
-  padding-top: 6px;
+  padding-top: 22px;
+  padding-bottom: 28px;
 }
 
-#waveCanvas{
-  display:block;
-  width: 100%;
-  height: 220px;
-  cursor: grab;
-  touch-action: none;
-}
-#waveCanvas:active{ cursor: grabbing; }
-
-.wavetank-labels{
-  position: absolute;
-  top: 16px; left: 0; right: 0;
-  display:flex;
-  justify-content: space-between;
-  padding: 0 8px;
-  pointer-events: none;
-}
-.wl{
-  font-family: var(--mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--foam-dim);
-}
-.wl-structure{ color: var(--brass); }
-
-.wavetank-caption{
+.wavetank-intro{
   font-family: var(--mono);
   font-size: 0.75rem;
   color: var(--foam-dim);
   text-align: center;
-  padding: 10px 12px 22px;
-  margin: 0;
+  margin: 0 0 20px;
 }
 .drag-hint{ color: var(--contour); display: inline-block; }
+
+.wavetank-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--contour-dim);
+  border: 1px solid var(--contour-dim);
+}
+
+.wavetank-panel{
+  background: var(--ink);
+  padding: 14px 10px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tank-canvas{
+  display:block;
+  width: 100%;
+  height: 168px;
+  cursor: grab;
+  touch-action: none;
+}
+.tank-canvas:active{ cursor: grabbing; }
+
+.panel-label{
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--foam);
+  text-align: center;
+  margin: 12px 0 0;
+}
+.panel-label span{
+  display: block;
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-top: 3px;
+}
 
 /* ============================================================
    WAYFINDING NAV
@@ -432,9 +446,14 @@ a{ color: inherit; }
   .tl-date{ text-align:left; }
 
   .wayfind{ gap: 16px; padding: 12px 14px; overflow-x:auto; justify-content:flex-start; }
+
+  .wavetank-grid{ grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 480px){
   .focus-grid{ grid-template-columns: 1fr; }
   .section{ padding: 64px 20px; }
+
+  .wavetank-grid{ grid-template-columns: 1fr; }
+  .tank-canvas{ height: 190px; }
 }
