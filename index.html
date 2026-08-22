@@ -41,14 +41,30 @@
     </div>
   </div>
 
-  <div class="wavetank" role="img" aria-label="Animated diagram of an incident wave scattering after striking a porous floating cage, illustrating wave–structure interaction research">
-    <canvas id="waveCanvas"></canvas>
-    <div class="wavetank-labels">
-      <span class="wl wl-in">incident wave</span>
-      <span class="wl wl-structure">porous cage</span>
-      <span class="wl wl-out">scattered / transmitted</span>
+  <div class="wavetank-section">
+    <p class="wavetank-intro">η(x,t) — four live sketches of the wave–structure problems this desk works on. <span class="drag-hint">Drag inside any panel to change the incident wave.</span></p>
+
+    <div class="wavetank-grid">
+      <div class="wavetank-panel" role="img" aria-label="Animated diagram of a wave scattering after striking a porous baffle">
+        <canvas class="tank-canvas" data-type="baffle"></canvas>
+        <p class="panel-label">Porous baffle<span>wave scattering</span></p>
+      </div>
+
+      <div class="wavetank-panel" role="img" aria-label="Animated diagram of an oscillating water column chamber driving an air turbine">
+        <canvas class="tank-canvas" data-type="owc"></canvas>
+        <p class="panel-label">Oscillating water column<span>air-turbine chamber</span></p>
+      </div>
+
+      <div class="wavetank-panel" role="img" aria-label="Animated diagram of a flexible porous membrane flexing as waves pass through it">
+        <canvas class="tank-canvas" data-type="membrane"></canvas>
+        <p class="panel-label">Flexible porous membrane<span>compliant wave screen</span></p>
+      </div>
+
+      <div class="wavetank-panel" role="img" aria-label="Animated diagram of a floating moored pontoon heaving and rolling with the waves">
+        <canvas class="tank-canvas" data-type="moored"></canvas>
+        <p class="panel-label">Floating moored system<span>heave &amp; mooring response</span></p>
+      </div>
     </div>
-    <p class="wavetank-caption">η(x,t) — a live sketch of the problem this desk works on: what a floating porous structure does to the wave that meets it. <span class="drag-hint">Drag inside the tank to change the incident wave.</span></p>
   </div>
 </header>
 
