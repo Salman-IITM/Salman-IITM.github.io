@@ -3,174 +3,218 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Salman Shah | Research Scholar</title>
+<title>Salman Shah — Ocean Engineering, IIT Madras</title>
+<meta name="description" content="Salman Shah, Research Scholar, Dept. of Ocean Engineering, IIT Madras. Wave scattering, porous & floating structures, marine aquaculture hydrodynamics." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.css" />
-
-<!-- Three.js + Vanta -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
 </head>
-
 <body>
 
-<!-- ================= HEADER ================= -->
-<header id="ocean-header">
-<div class="header-inner">
+<div class="grain"></div>
 
-<div class="logo">
-<img src="dp.jpg" alt="Salman Shah">
-<div class="name">
-Salman Shah, Ph.D (pursuing)<br>
-<span style="display:block;">
-Marine Aquaculture, Risers and Wave Energy Laboratory (MAR-WEL Lab)
-</span>
-<span style="display:block;">
-Dept. of Ocean Engineering | IIT, Madras
-</span>
-</div>
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="hero-top">
+    <div class="portrait-col">
+      <div class="portrait-frame">
+        <img src="dp.jpg" alt="Portrait of Salman Shah" class="portrait" />
+      </div>
+      <p class="coord-tag">13.0827°N&nbsp; 80.2707°E<br><span>Chennai, India</span></p>
+    </div>
 
+    <div class="title-col">
+      <p class="eyebrow">Research Scholar&ensp;·&ensp;Ph.D&nbsp;(pursuing)</p>
+      <h1 class="display-name">Salman<br>Shah</h1>
+      <p class="lab-line">Marine Aquaculture, Risers &amp; Wave Energy Laboratory <span class="ampersand">— MAR·WEL</span></p>
+      <p class="dept-line">Dept. of Ocean Engineering, IIT Madras</p>
+
+      <nav class="hero-links" aria-label="Profiles">
+        <a href="https://orcid.org/0009-0003-4979-7137" target="_blank" rel="noopener">ORCID</a>
+        <a href="https://scholar.google.com/citations?user=4fOQtf8AAAAJ&hl=en&oi=sra" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/salman-shah-a9952a186/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.researchgate.net/profile/Salman-Shah-18" target="_blank" rel="noopener">ResearchGate</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wavetank" role="img" aria-label="Animated diagram of an incident wave scattering after striking a porous floating cage, illustrating wave–structure interaction research">
+    <canvas id="waveCanvas"></canvas>
+    <div class="wavetank-labels">
+      <span class="wl wl-in">incident wave</span>
+      <span class="wl wl-structure">porous cage</span>
+      <span class="wl wl-out">scattered / transmitted</span>
+    </div>
+    <p class="wavetank-caption">η(x,t) — a live sketch of the problem this desk works on: what a floating porous structure does to the wave that meets it. <span class="drag-hint">Drag inside the tank to change the incident wave.</span></p>
+  </div>
 </header>
 
-<!-- ================= MAIN CONTENT ================= -->
-<main class="main-content">
+<!-- ================= STICKY WAYFINDING ================= -->
+<nav class="wayfind" aria-label="Section navigation">
+  <a href="#focus">Focus</a>
+  <a href="#publications">Publications</a>
+  <a href="#experience">Experience</a>
+  <a href="#awards">Awards</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-<!-- ===== Sidebar ===== -->
-<aside class="sidebar">
+<main>
 
-
-<h2>Awards and Contributions</h2>
-<ul class="awards-list">
-
-    <li>
-      <strong>Research article featured in Agriculture Daily, Apr 2026. </strong><br>
-      <span> <a href="https://plu.mx/plum/a/news?doi=10.1016%2Fj.oceaneng.2026.124389&theme=plum-sciencedirect-theme&hideUsage=true" target="_blank">Investigators from Indian Institutes of Technology Madras Report New Data on Fish Farms.</a></span>
-    </li>
-    
-<li>
-<strong>Taiwan Experience Education Program Scholarship (TEEP 2025) </strong><br>
-<span>Ministry of Education, Taiwan-  National Taiwan Ocean University, Taiwan, 2025</span>
-</li>
-
-<li>
-<strong>Invited Seminar - Lecture series </strong><br>
-<span>Dept. of Harbour and River Engineering - National Taiwan Ocean University, Taiwan, 2025</span>
-</li>
-
-<li>
-<strong>International Immersion Experience Award</strong><br>
-<span>Cycle-8, Global Engagement office, IIT Madras, 2025</span>
-</li>
-
-<li>
-<strong>Presented in World Ocean Science Congress</strong><br>
-<span>Theme-Marine Aquaculture systems, National Institute of Ocean Technology, 2025</span>
-</li>
-
-</ul>
-
-<h2>Research Interests</h2>
-<ul>
-<li>Wave propagation & scattering</li>
-<li>Porous & floating structures</li>
-<li>Experimental hydrodynamics</li>
-<li>Numerical modelling of FSI</li>
-</ul>
-
-</aside>
-
-<!-- ===== Articles ===== -->
-<section class="articles">
-<h1>Articles in Peer Reviewed Journals (SCI)</h1>
-
-<article>
-<h2>Hydrodynamic shielding by distributed standalone perforated cage systems for fish farming</h2>
-<p><strong>Salman, S.</strong>, Vijay, K. G. (2026)</p>
-<p><em>Ocean Engineering</em>, Elsevier | <strong>Q1</strong> </p>
-<a href="https://doi.org/10.1016/j.oceaneng.2026.124389" target="_blank">Read full article</a>
-</article>
-
-<article>
-<h2>Hydrodynamic performance of nested rectangular aquaculture cages under wave action</h2>
-<p><strong>Salman, S.</strong>, Vijay, K. G., Behera, H. (2026)</p>
-<p><em>Physics of Fluids</em>, AIP Publishing | <strong>Q1</strong> </p>
-<a href="https://doi.org/10.1063/5.0313865" target="_blank">Read full article</a>
-</article>
-
-<article>
-<h2>Gravity wave scattering by barge integrated porous cages</h2>
-<p><strong>Salman, S.</strong>, Vijay, K. G., Behera, H., Chen, J. T. (2025)</p>
-<p><em>Physics of Fluids</em>, AIP Publishing | <strong>Q1</strong> </p>
-<a href="https://doi.org/10.1063/5.0278863" target="_blank">Read full article</a>
-</article>
-
-<article>
-<h2>Numerical and experimental investigation on a dual pontoon supported compartmentalized porous cages</h2>
-<p><strong>Salman, S.</strong>, Vijay, K. G., Nishad, C. S., Chen, J. T. (2025)</p>
-<p><em>Engineering Analysis with Boundary Elements</em>, Elsevier | <strong>Q1</strong> </p>
-<a href="https://www.sciencedirect.com/science/article/pii/S0955799725002413" target="_blank">
-Read full article
-</a>
-</article>
-
-
-<h1>Experience </h1>
-
-<article>
-<h2>Research Scholar & Research Assistant (Full Time) </h2>
-<p><strong>JUL 2023- Present | Dept. of Ocean Engineering</strong></p>
-<p><em>Indian Institute of Technology, Madras</em></p>
-</article>
-
-<article>
-<h2>Short Term Visiting Researcher  </h2>
-<p><strong>SEP 2025- NOV 2025 | Center of Excellence for Ocean Engineering</strong></p>
-<p><em>National Taiwan Ocean University, Keelung, Taiwan</em></p>
-</article>
-
-<article>
-<h2>Assistant Professor - Dept. of Mechanical Engg. </h2>
-<p><strong>AUG 2021- JUN 2023 | Sree Narayana Gurukulam College of Engineering </strong></p>
-<p><em>(Affiliated to APJAKTU), Kerala </em></p>
-</article>
-
-<article>
-<h2>CFD Consultant Cum Mentor (Part-time) </h2>
-<p><strong>AUG 2020- JUN 2022 | KrewX Edtech LLP (Part time), Kochi, Kerala</strong></p>
-<p><em>Area: Fluid-Structure interaction, Time domain simulations (Fluid Flow/Structural/Thermal) </em></p>
-</article>
-
+<!-- ================= RESEARCH FOCUS ================= -->
+<section id="focus" class="section">
+  <p class="section-eyebrow">01 — Focus</p>
+  <h2 class="section-title">What this desk works on</h2>
+  <div class="focus-grid">
+    <div class="focus-card">
+      <span class="focus-mark">～</span>
+      <h3>Wave propagation &amp; scattering</h3>
+      <p>How gravity waves bend, split, and lose energy when they meet a structure in their path.</p>
+    </div>
+    <div class="focus-card">
+      <span class="focus-mark">▦</span>
+      <h3>Porous &amp; floating structures</h3>
+      <p>Perforated and compartmentalized cages, pontoons, and barges as wave-attenuating systems.</p>
+    </div>
+    <div class="focus-card">
+      <span class="focus-mark">≈</span>
+      <h3>Experimental hydrodynamics</h3>
+      <p>Physical wave-tank testing to validate and stress-test the numbers.</p>
+    </div>
+    <div class="focus-card">
+      <span class="focus-mark">∫</span>
+      <h3>Numerical modelling of FSI</h3>
+      <p>Fluid–structure interaction, solved: boundary-element and time-domain methods.</p>
+    </div>
+  </div>
 </section>
 
+<!-- ================= PUBLICATIONS ================= -->
+<section id="publications" class="section">
+  <p class="section-eyebrow">02 — Log</p>
+  <h2 class="section-title">Articles in peer-reviewed journals (SCI)</h2>
+
+  <ul class="pub-log">
+    <li class="pub-entry">
+      <span class="pub-year">2026</span>
+      <div class="pub-body">
+        <h3>Hydrodynamic shielding by distributed standalone perforated cage systems for fish farming</h3>
+        <p class="pub-meta">Salman, S., Vijay, K. G. &ensp;·&ensp; <em>Ocean Engineering</em>, Elsevier &ensp;·&ensp; <span class="quartile">Q1</span></p>
+        <a class="pub-link" href="https://doi.org/10.1016/j.oceaneng.2026.124389" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+    </li>
+
+    <li class="pub-entry">
+      <span class="pub-year">2026</span>
+      <div class="pub-body">
+        <h3>Hydrodynamic performance of nested rectangular aquaculture cages under wave action</h3>
+        <p class="pub-meta">Salman, S., Vijay, K. G., Behera, H. &ensp;·&ensp; <em>Physics of Fluids</em>, AIP Publishing &ensp;·&ensp; <span class="quartile">Q1</span></p>
+        <a class="pub-link" href="https://doi.org/10.1063/5.0313865" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+    </li>
+
+    <li class="pub-entry">
+      <span class="pub-year">2025</span>
+      <div class="pub-body">
+        <h3>Gravity wave scattering by barge integrated porous cages</h3>
+        <p class="pub-meta">Salman, S., Vijay, K. G., Behera, H., Chen, J. T. &ensp;·&ensp; <em>Physics of Fluids</em>, AIP Publishing &ensp;·&ensp; <span class="quartile">Q1</span></p>
+        <a class="pub-link" href="https://doi.org/10.1063/5.0278863" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+    </li>
+
+    <li class="pub-entry">
+      <span class="pub-year">2025</span>
+      <div class="pub-body">
+        <h3>Numerical and experimental investigation on a dual pontoon supported compartmentalized porous cages</h3>
+        <p class="pub-meta">Salman, S., Vijay, K. G., Nishad, C. S., Chen, J. T. &ensp;·&ensp; <em>Engineering Analysis with Boundary Elements</em>, Elsevier &ensp;·&ensp; <span class="quartile">Q1</span></p>
+        <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0955799725002413" target="_blank" rel="noopener">Read full article →</a>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="section">
+  <p class="section-eyebrow">03 — Timeline</p>
+  <h2 class="section-title">Experience</h2>
+
+  <ol class="timeline">
+    <li class="timeline-entry">
+      <span class="tl-date">Jul 2023 — Present</span>
+      <div class="tl-body">
+        <h3>Research Scholar &amp; Research Assistant (Full time)</h3>
+        <p>Dept. of Ocean Engineering, Indian Institute of Technology, Madras</p>
+      </div>
+    </li>
+    <li class="timeline-entry">
+      <span class="tl-date">Sep 2025 — Nov 2025</span>
+      <div class="tl-body">
+        <h3>Short Term Visiting Researcher</h3>
+        <p>Center of Excellence for Ocean Engineering, National Taiwan Ocean University, Keelung, Taiwan</p>
+      </div>
+    </li>
+    <li class="timeline-entry">
+      <span class="tl-date">Aug 2021 — Jun 2023</span>
+      <div class="tl-body">
+        <h3>Assistant Professor, Dept. of Mechanical Engineering</h3>
+        <p>Sree Narayana Gurukulam College of Engineering (Affiliated to APJAKTU), Kerala</p>
+      </div>
+    </li>
+    <li class="timeline-entry">
+      <span class="tl-date">Aug 2020 — Jun 2022</span>
+      <div class="tl-body">
+        <h3>CFD Consultant cum Mentor (Part time)</h3>
+        <p>KrewX Edtech LLP, Kochi, Kerala &ensp;·&ensp; Fluid–structure interaction, time-domain simulations (fluid flow / structural / thermal)</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ================= AWARDS ================= -->
+<section id="awards" class="section">
+  <p class="section-eyebrow">04 — Record</p>
+  <h2 class="section-title">Awards &amp; contributions</h2>
+
+  <ul class="awards-grid">
+    <li>
+      <h3>Featured in Agriculture Daily</h3>
+      <p>Apr 2026 &ensp;·&ensp; <a href="https://plu.mx/plum/a/news?doi=10.1016%2Fj.oceaneng.2026.124389&theme=plum-sciencedirect-theme&hideUsage=true" target="_blank" rel="noopener">"Investigators from IIT Madras report new data on fish farms" →</a></p>
+    </li>
+    <li>
+      <h3>Taiwan Experience Education Program Scholarship (TEEP)</h3>
+      <p>Ministry of Education, Taiwan — National Taiwan Ocean University, 2025</p>
+    </li>
+    <li>
+      <h3>Invited Seminar — Lecture Series</h3>
+      <p>Dept. of Harbour and River Engineering, National Taiwan Ocean University, Taiwan, 2025</p>
+    </li>
+    <li>
+      <h3>International Immersion Experience Award</h3>
+      <p>Cycle-8, Global Engagement Office, IIT Madras, 2025</p>
+    </li>
+    <li>
+      <h3>Presented at the World Ocean Science Congress</h3>
+      <p>Theme: Marine Aquaculture Systems — National Institute of Ocean Technology, 2025</p>
+    </li>
+  </ul>
+</section>
 
 </main>
 
 <!-- ================= FOOTER ================= -->
-<footer>
-<p>
-<img src="https://visitor-badge.laobi.icu/badge?page_id=salman-iitm.index" alt="Visitors">
-</p>
-<p>
-© Salman Shah | Department of Ocean Engineering, IIT Madras
-</p>
-<a href="https://orcid.org/0009-0003-4979-7137" target="_blank">
-<img src="gallery/ORCID.svg" alt="ORCID" class="social-icon">
-</a>
-
-<a href="https://www.linkedin.com/in/salman-shah-a9952a186/" target="_blank">
-<img src="gallery/Linkedin.svg" alt="LinkedIn" class="social-icon">
-</a>
-<a href="https://scholar.google.com/citations?user=4fOQtf8AAAAJ&hl=en&oi=sra" target="_blank">
-<img src="gallery/GoogleScholar.svg" alt="Googlescholar" class="social-icon1">
-</a>
-
-<a href="https://www.researchgate.net/profile/Salman-Shah-18" target="_blank">
-<img src="gallery/Researchgate.svg" alt="Researchgate" class="social-icon1">
-</a>
-
+<footer id="contact" class="footer">
+  <p class="footer-line">Dept. of Ocean Engineering, IIT Madras</p>
+  <nav class="footer-links" aria-label="Profiles">
+    <a href="https://orcid.org/0009-0003-4979-7137" target="_blank" rel="noopener">ORCID</a>
+    <a href="https://www.linkedin.com/in/salman-shah-a9952a186/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://scholar.google.com/citations?user=4fOQtf8AAAAJ&hl=en&oi=sra" target="_blank" rel="noopener">Google Scholar</a>
+    <a href="https://www.researchgate.net/profile/Salman-Shah-18" target="_blank" rel="noopener">ResearchGate</a>
+  </nav>
+  <p class="footer-copy">© <span id="year"></span> Salman Shah</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
